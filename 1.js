@@ -1,5 +1,13 @@
 const fs = require('fs')
 
-let file = fs.readFileSync('./1.in', 'utf8')
+let lines = fs.readFileSync('./1.in', 'utf8').split('\n')
 
-console.log(file)
+let total = 0
+
+lines.forEach(num => {
+  if (num){
+    total += parseInt(num)
+  }
+})
+
+console.log('part 1', total)
