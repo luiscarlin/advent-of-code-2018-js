@@ -1,5 +1,7 @@
 ### Advent of Code 2018 JavaScript
 
+[![CircleCI](https://circleci.com/gh/luiscarlin/advent-of-code-2018-js/tree/master.svg?style=svg)](https://circleci.com/gh/luiscarlin/advent-of-code-2018-js/tree/master)
+
 My solutions to Advent of Code 2018 in JavaScript
 
 ## Get Started
