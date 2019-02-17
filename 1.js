@@ -33,4 +33,4 @@ function getFirstRepeatedFreq(lines) {
   }
 }
 
-module.exports = (sumList)
+module.exports = { sumList, getFirstRepeatedFreq }
