@@ -1,18 +1,20 @@
 const fs = require('fs')
 
-let lines = fs.readFileSync('./1.in', 'utf8').split('\n')
+const main = () => {
+  let lines = fs.readFileSync('./1.in', 'utf8').split('\n')
 
-console.log('part 1', sumList(lines))
-console.log('part 2', getFirstRepeatedFreq(lines))
+  console.log('part 1', sumList(lines))
+  console.log('part 2', getFirstRepeatedFreq(lines))
+}
 
-function sumList(lines) {
+const sumList = (lines) => {
   return lines
     .filter(line => line)
     .map(num => parseInt(num))
     .reduce((total, num) => total + num)
 }
 
-function getFirstRepeatedFreq(lines) {
+const getFirstRepeatedFreq = (lines) => {
   let seen = []
   let sum = 0
 
@@ -31,6 +33,10 @@ function getFirstRepeatedFreq(lines) {
       }
     }
   }
+}
+
+if (require.main == module) {
+  main();
 }
 
 module.exports = { sumList, getFirstRepeatedFreq }
