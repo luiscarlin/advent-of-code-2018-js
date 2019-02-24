@@ -1,8 +1,7 @@
 {
   "name": "advent-of-code-2018-js",
   "version": "1.0.0",
-  "description": "",
-  "main": "1.js",
+  "description": "Advent of Code 2018 in JavaScript",
   "scripts": {
     "test": "jest"
   },
@@ -10,11 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/luiscarlin/advent-of-code-2018-js.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/luiscarlin/advent-of-code-2018-js/issues"
+  "author": {
+    "name": "LuisCarlin",
+    "url": "https://github.com/LuisCarlin"
   },
   "homepage": "https://github.com/luiscarlin/advent-of-code-2018-js#readme",
   "dependencies": {
