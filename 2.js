@@ -37,27 +37,26 @@ const part1 = () => {
     if (values.includes(3)) numberTriple++;
   });
 
-  console.log('part 1', numberDouble * numberTriple);
+  return numberDouble * numberTriple;
 };
 
 const part2 = () => {
   let lines = fs.readFileSync('./2.in', 'utf8').split('\n');
 
-  lines.forEach(line => {
-    lines.forEach(otherLine => {
+  for (let line of lines) {
+    for (let otherLine of lines) {
       const { offByOne, same } = isOffByOne(line, otherLine);
 
       if (offByOne) {
-        console.log('part2', same);
-        process.exit();
+        return same;
       }
-    });
-  });
+    }
+  }
 };
 
 const main = () => {
-  part1();
-  part2();
+  console.log('part1', part1());
+  console.log('part2', part2());
 };
 
 if (require.main == module) {
