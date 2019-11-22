@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { range } = require('./utils');
 
 const parseClaim = claim => {
   let parsedClaim = claim.split(' ');
@@ -24,8 +25,8 @@ const main = () => {
   for (let line of lines) {
     const { id, x, y, width, height } = parseClaim(line);
 
-    for (let dx of Array.from(Array(width).keys())) {
-      for (let dy of Array.from(Array(height).keys())) {
+    for (let dx of range(width)) {
+      for (let dy of range(height)) {
         coordinates[[x + dx, y + dy]] = coordinates[[x + dx, y + dy]]
           ? coordinates[[x + dx, y + dy]] + 1
           : 1;
