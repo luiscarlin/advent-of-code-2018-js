@@ -40,10 +40,22 @@ function main() {
     }
   }
 
-  console.log(minsAsleep);
-
   // const idMostSleeping = max(mins_asleep, (key = mins_asleep.get));
-  // console.log(idMostSleeping);
+
+  const idMostSleeping = Object.keys(minsAsleep).reduce((a, b) =>
+    minsAsleep[a] > minsAsleep[b] ? a : b
+  );
+
+  let filteredIdByMinute = 0;
+  for (let [key, val] of Object.entries(idByMinute)) {
+    if (key.split(',').includes(idMostSleeping)) {
+      filteredIdByMinute = key;
+    }
+  }
+
+  const [first, second] = filteredIdByMinute.split(',');
+
+  console.log('part 1', first * second);
 }
 
 if (require.main == module) {
