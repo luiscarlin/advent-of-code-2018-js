@@ -34,6 +34,20 @@ const main = () => {
     }
   }
 
+  for (let line of lines) {
+    const { id, x, y, width, height } = parseClaim(line);
+
+    let noOverlaps = true;
+
+    for (let dx of range(width)) {
+      for (let dy of range(height)) {
+        if (coordinates[[x + dx, y + dy]] > 1) noOverlaps = false;
+      }
+    }
+
+    if (noOverlaps) console.log('part 2', id);
+  }
+
   let sharedSquares = 0;
 
   for (let count of Object.values(coordinates)) {
