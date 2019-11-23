@@ -1,3 +1,4 @@
-const range = n => [...Array(n).keys()];
+const rangeWithStart = (start, end) => [...Array(end).keys()].slice(start);
+const range = end => [...Array(end).keys()];
 
-module.exports = { range: range };
+module.exports = { range, rangeWithStart };
